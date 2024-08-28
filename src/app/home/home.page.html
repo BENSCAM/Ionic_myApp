@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      BenoitHarck
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <!-- <ion-input label="Votre Nom" [(ngModel)]="message"></ion-input>
+    <ion-button expand="block" [disabled]="Test()" (click)="gestionClick()">Enregistrer</ion-button> -->
+    <!-- {{message}} -->
+    <ion-item>
+      <ion-label>Genre</ion-label>
+      <ion-radio-group [(ngModel)]="choix" value="Genre">
+        <ion-radio value="Feminin">Feminin</ion-radio>
+        <ion-radio value="Masculin">Masculin</ion-radio>
+      </ion-radio-group>
+    </ion-item>
+
+    <ion-item *ngIf="!selectchoix()">
+      <ion-input required label="Equipe prefere" [(ngModel)]="equipe"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="selectchoix()">
+      <ion-input required label="Serie prefere" [(ngModel)]="serie"></ion-input>
+    </ion-item>
+    <ion-button (click)="enregistrer()">Enregistrer</ion-button>
+  </div>
+</ion-content>

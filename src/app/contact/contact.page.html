@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Contact</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item *ngIf="control">
+    <ion-label id="NC"  (click)="Enregistrement()">Creer un nouveau contact</ion-label>
+    <!-- <ion-alert trigger="NC" 
+    header="Veillez entrer votre nom"
+    [buttons]="alertButtons"
+    [inputs]="alertInputs"></ion-alert> -->
+  </ion-item>
+  <!-- <ion-item *ngIf="control">
+    <ion-label >Ajouter a un contact</ion-label>
+  </ion-item> -->
+  <div class="calc-display">
+    <ion-input type="hidden"></ion-input>
+    <ion-input type="hidden"></ion-input>
+    <ion-input type="hidden"></ion-input>
+    <ion-input type="hidden"></ion-input>
+    <ion-input type="hidden"></ion-input>
+    <ion-input type="hidden"></ion-input>
+    <ion-item>
+      <ion-input class="ion-text-center"  readonly="true" [(ngModel)]="Display"></ion-input>
+      <ion-button color="light" class="buteff" (click)="Effacer()">Eff</ion-button>
+    </ion-item>
+  </div>
+  <ion-grid>
+    <ion-item>
+      <ion-button color="light" (click)="click(1)">1</ion-button>
+      <ion-button color="light" (click)="click(2)">2</ion-button>
+      <ion-button color="light" (click)="click(3)">3</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-button color="light" (click)="click(4)">4</ion-button>
+      <ion-button color="light" (click)="click(5)">5</ion-button>
+      <ion-button color="light" (click)="click(6)">6</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-button color="light" (click)="click(7)">7</ion-button>
+      <ion-button color="light" (click)="click(8)">8</ion-button>
+      <ion-button color="light" (click)="click(9)">9</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-button color="light" (click)="click('*')">*</ion-button>
+      <ion-button color="light" (click)="click(0)">0</ion-button>
+      <ion-button color="light" (click)="click('#')">#</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-button shape="round" color="success" (click)="Appeler()">Appeler</ion-button>
+    </ion-item>
+  </ion-grid>
+
+</ion-content>

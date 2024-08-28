@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>reservation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">reservation</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-input label-placement="floating" label="Nom complet :" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label-placement="floating" label="Telephone :" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label-placement="floating" type="Email :" label="Email :"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-select label="Classe Bus :">
+      <ion-select-option value="VIP">VIP</ion-select-option>
+      <ion-select-option value="CLASSIQUE">CLASSIQUE</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-input label-placement="floating" type="date" label="Date de naissance :"
+      ></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-input label-placement="floating" type="number" label="Nombre de places :" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label-placement="floating" label="Code de confirmation :" type="text"></ion-input>
+  </ion-item>
+  <ion-button expand="full">Effectuer la reservation</ion-button>
+</ion-content>

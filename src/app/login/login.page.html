@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-input label-placement="floating" type="text" label="Username :" [(ngModel)]="Username"
+      placeholder="Enter your Username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input label-placement="floating" type="PassWord" label="PassWord :" [(ngModel)]="Password"
+      placeholder="Enter your PassWord"></ion-input>
+  </ion-item>
+  <ion-item *ngIf="messageErreur">{{messageErreur}}</ion-item>
+  <ion-button expand="full" (click)="loginVerification()">Login</ion-button>
+  <!-- methode 1 -->
+  <ion-button expand="full" routerLink="/admin"
+    [state]="{name: 'ABAH', profession: 'Etudiant'}">Redirection</ion-button>
+  <!-- methode 2 -->
+  <ion-button expand="full" (click)="loginVerificationWithState()">Login With State</ion-button>
+  <!-- methode 3 -->
+  <ion-button expand="full" routerLink="/user" [queryParams]="{name: 'ABAH', profession: 'Etudiant'}">Redirection 2</ion-button>
+  <ion-button expand="full" (click)="loginVerificationWithquery()">Login With Query</ion-button>
+  <!-- methode 4 -->
+  <ion-button expand="full" [routerLink]="['/user','bonjour']">redirection Avec Param</ion-button>
+</ion-content>
